@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="ChessCampSignIn.Selection"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:local="clr-namespace:ChessCampSignIn"
+			 mc:Ignorable="d"
+			 d:DesignHeight="400"
+			 d:DesignWidth="333"
+			 x:Name="Select">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition></ColumnDefinition>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition Width="3*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<Label Content="{Binding Title, ElementName=Select}"
+				   HorizontalAlignment="Center" 
+				   Grid.Column="1"/>
+		</Grid>
+		<ComboBox Grid.Row="1"
+				  IsEditable="True"
+				  x:Name="options">
+		</ComboBox>
+	</Grid>
+</UserControl>

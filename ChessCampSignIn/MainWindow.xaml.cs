@@ -23,6 +23,23 @@ namespace ChessCampSignIn
 		public MainWindow()
 		{
 			InitializeComponent();
+			this.OpenNewWindow(new WeekSelection(this));
+		}
+
+
+		private void ModifyActivites_click(object sender, RoutedEventArgs e)
+		{
+			this.OpenNewWindow(new ModifyActivites(this));
+		}
+
+		private void SignInCampers_click(object sender, RoutedEventArgs e)
+		{
+			this.OpenNewWindow(new SignInWindow(this));
+		}
+
+		private void MakeNewWeek_click(object sender, RoutedEventArgs e)
+		{
+			this.OpenNewWindow(new WeekSelection(this));
 		}
 	}
 }

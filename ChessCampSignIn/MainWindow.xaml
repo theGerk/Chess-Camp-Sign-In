@@ -1,12 +1,40 @@
 ﻿<Window x:Class="ChessCampSignIn.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ChessCampSignIn"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:ChessCampSignIn"
+		mc:Ignorable="d"
+		Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Button Grid.Column="0"
+				Grid.Row="0"
+				Click="SignInCampers_click">
+			Sign In Campers
+		</Button>
+		<Button Grid.Column="1"
+				Grid.Row="0">
+			Print Current Week
+		</Button>
+		<Button Grid.Column="0"
+				Grid.Row="1"
+				Click="MakeNewWeek_click">
+			Select week or Make new week
+		</Button>
+		<Button Grid.Column="1"
+				Grid.Row="1"
+				Click="ModifyActivites_click">
+			Modify Activities
+		</Button>
+	</Grid>
 </Window>

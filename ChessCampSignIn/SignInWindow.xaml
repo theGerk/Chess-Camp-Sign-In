@@ -1,0 +1,33 @@
+﻿<Window x:Class="ChessCampSignIn.SignInWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:ChessCampSignIn"
+		mc:Ignorable="d"
+		Title="SignInWindow"
+		Height="600"
+		Width="1000"
+		Closing="Window_Closing">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="2*"></ColumnDefinition>
+			<ColumnDefinition Width="2*"></ColumnDefinition>
+			<ColumnDefinition Width="2*"></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<local:Selection Title="Camper Name"
+						 Grid.Column="0"
+						 x:Name="CamperName"></local:Selection>
+		<local:Selection Title="Morning Activity"
+						 Grid.Column="1"
+						 x:Name="Morning"></local:Selection>
+		<local:Selection Title="Afternoon Activity"
+						 Grid.Column="2"
+						 x:Name="Afternoon"></local:Selection>
+		<Button Content="Submit"
+				MouseDown="Button_MouseDown"
+				KeyDown="Button_KeyDown"
+				Grid.Column="3"></Button>
+	</Grid>
+</Window>
